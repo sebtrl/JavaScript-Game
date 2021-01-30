@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Document</title>
+</head>
+
+<body id='body'>
+
+    <div id="container">
+        <h1 id="title-game"></a>Le jeu des cliques</h1>
+        <main id="wrapper">
+            <div id="counter">
+                <label for="click" class='click-counter'>Nombre de cliques effectués :</label> <span id="parent-count">0</span>
+            </div>
+            <div id="rules">
+
+
+
+
+
+                <p>Voulez vous tenter votre chance, le but est de finir
+                    le jeu avec le moins de cliques au compteur.</p>
+
+                
+
+    <input type="button" value="Commencer" class='big-btn'id="btn-start" />
+
+                
+
+
+            </div>
+            
+            <div id="step1">
+                <h2 id="titre-1">Première etape</h2>
+
+                <p class='rules-step1'>
+                    Ou ce trouve <span id='step-one-random-number'></span> dans les cases suivante</p>
+
+                <table class='tab-step1' >
+                    <tr>
+                        <td><input type="button" value="#" class=" btn-tab" id="tab-btn0" /></td>
+                        <td><input type="button" value="#" class="btn-tab" id="tab-btn1" /></td>
+                        <td><input type="button" value="#" class="btn-tab" id="tab-btn2" /></td>
+
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="#" class="btn-tab" id="tab-btn3" /></td>
+                        <td><input type="button" value="#" class="btn-tab" id="tab-btn4" /></td>
+                        <td><input type="button" value="#" class="btn-tab" id="tab-btn5" /></td>
+
+                    </tr>
+
+
+                </table>
+
+                <input type="button" value="Étape suivante" class="big-btn " id='btn-step1' />
+            </div>
+            <div id="step2">
+                <h2 id="titre-2">Deuxième étape</h2>
+                
+                <p id="rules-step2">Vous devez cliquer sur un de ces numéros, seulement un seul vous aménera à
+                    l'étape suivante</p>
+
+                <div class="wrapper-input-step2">
+
+                    <input type="button" value="1" class="btn" id="btn-1" />
+                    <input type="button" value="2" class="btn" id="btn-2" />
+                    <input type="button" value="3" class="btn" id="btn-3" />
+                </div>
+                <input type="button" value="Étape suivante" class="big-btn " id='btn-step2' />
+            </div>
+            <div id="step3">
+                <h2 id="titre-3">Troisième étape</h2>
+                
+                <p id="rules-step3">Vous avez deux choix pour atteindre la prochaine étape, attention à ne pas
+                    revenir en arrière.</p>
+
+                <div class="div-2-choice">
+                    <input type="button" value="ok" class="btn " id='btn1-step-3'>
+                    <input type="button" value="ok" class="btn " id='btn2-step-3' />
+                </div>
+                <input type="button" value="Étape suivante" class="big-btn " id='btn-step3' />
+            </div>
+            <div id="end">
+                <div id="rules-step-4">Felicitation vous avez terminer le jeu avec <span id='total-clique'></span>
+                    clique</div>
+                    <input type="button" value="Rejouer" class="big-btn " id='btn-reset'>
+                    <input type="button" value="Page d'accueil" class="big-btn " id='btn-change' />
+
+
+            </div>
+
+
+        </main>
+
+
+
+
+    </div>
+    <script type="text/javascript" src="./js/lucky/lucky.js"></script>
+</body>
+
+</html>
