@@ -315,7 +315,7 @@ function functStep2() {
 //     step 3
 
 const btnStep3 = document.getElementById('btn-step3')
-const counter = document.getElementById('counter')
+
 btnStep3.addEventListener('click', function () {
         stepDisplay(step3)
         stepDisplay(end)
@@ -324,7 +324,7 @@ btnStep3.addEventListener('click', function () {
         totalClick.innerHTML = parentClick + 1;
         parent.removeEventListener('click', parentOnClick)
 
-        counter.style.display = 'none';
+        
 
 })
 
@@ -386,7 +386,7 @@ function reset() {
         stepDisplay(end)
         stepDisplay(rules)
         btnStart.style.display = 'inline-block';
-        counter.style.display = 'block';
+        
         btnStep1.style.display = 'none';
         btnStep2.style.display = 'none';
         btnStep3.style.display = 'none';
