@@ -1,0 +1,32 @@
+
+
+nav {
+    display: flex;
+    flex-direction: column;
+    grid-column-start: 4;
+    margin-top: 10px;
+    ;
+
+    grid-row-start: 1;
+
+    width: 100%;
+    font-size: 25px;
+
+    .big-btn {
+        width: 135px;
+        border: 3px solid purple;
+        margin-top: 10px;
+        ;
+    
+        color: purple;
+
+        &:hover {
+
+            border: 3px solid white;
+        
+            background-color: rgb(211, 142, 14);
+            color: white;
+        }
+    }
+}
+

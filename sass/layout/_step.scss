@@ -1,0 +1,119 @@
+/*-----------------Lucky Game------------------*/
+
+#rules {
+    grid-column: span 2;
+}
+
+#step1 {
+    grid-column: span 2;
+    text-align: center;
+    display: none;
+
+}
+
+.rules-step1 {
+    margin-top: 10px;
+}
+
+.tab-step1 {
+    margin-top: 10px;
+    width: 40%;
+    margin: 0 30%;
+
+    @media (max-width:500px) {
+
+
+        font-size: 20px;
+        width: 80px;
+
+        margin: 0 22%;
+
+
+    }
+}
+
+#step2 {
+    grid-column: span 2;
+    text-align: center;
+    display: none;
+}
+
+#step3 {
+    grid-column: span 2;
+    text-align: center;
+    display: none;
+}
+
+#step3 {
+    grid-column: span 2;
+    text-align: center;
+    display: none;
+}
+
+#end {
+    margin: 10%;
+    grid-column: span 2;
+
+    text-align: center;
+    display: none;
+}
+
+/*-----------------Memory Game------------------*/
+#rules1-step2,#rules1-step3 ,#rules1-step4 ,#rules1-step5 ,#rules1-step6  {
+    margin-top: 10px;
+    
+}
+#rules2-step2 {
+    margin-top: 10px;
+    display: none;
+}
+#rules2-step3 {
+    margin-top: 10px;
+    display: none;
+}
+#rules2-step4 {
+    margin-top: 10px;
+    display: none;
+}
+
+
+#rules2-step5 {
+    margin-top: 10px;
+    display:none;
+}
+#step4 {
+    grid-column: span 2;
+    text-align: center;
+    display: none;
+}
+
+#step5 {
+    grid-column: span 2;
+    text-align: center;
+    display: none;
+}
+
+#step6 {
+    grid-column: span 2;
+    text-align: center;
+    display: none;
+
+    #tab-step6 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    
+    
+}
+
+.tab{
+    margin-top: 10px;
+    width: 40%;
+    margin: 0 30%;
+}
+.big-tab{
+    margin-top: 10px;
+    width: 60%;
+    margin: 0 20%;
+}

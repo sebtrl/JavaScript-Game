@@ -1,0 +1,35 @@
+#counter {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    color: white;
+    grid-row: span 1;
+
+    width: 60%;
+    font-size: 25px;
+    @media (min-width:1300px) {
+ 
+       
+            /* grid-column-start: 1;
+            grid-column-end: 6;*/
+            grid-row-start: 3;
+            grid-column: span 4;
+            font-size: 30px;
+    
+    
+    
+    
+        }
+    @media (max-width:500px) {
+   
+
+        
+            margin: 25px;
+            margin-left: 5px;
+            font-size: 22px;
+    
+            width: 80%;
+    
+    
+        }
+
+}

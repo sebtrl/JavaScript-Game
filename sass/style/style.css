@@ -1,0 +1,488 @@
+.btn-tab {
+  font-size: 20px;
+  width: 80px;
+  border-radius: 30px 20px;
+  border: 3px solid purple;
+  background-color: #efefef;
+  color: #efefef;
+}
+.btn-tab:hover {
+  font-size: 20px;
+  width: 80px;
+  border-radius: 30px 20px;
+  border: 3px solid white;
+  background-color: purple;
+  color: purple;
+}
+@media (max-width: 500px) {
+  .btn-tab {
+    font-size: 18px;
+    width: 60px;
+  }
+  .btn-tab:hover {
+    font-size: 20px;
+    width: 60px;
+    border-radius: 30px 20px;
+    border: 3px solid white;
+    background-color: purple;
+    color: purple;
+  }
+}
+
+.btn-visible {
+  font-size: 20px;
+  width: 80px;
+  border-radius: 30px 20px;
+  border: 3px solid purple;
+  background-color: #efefef;
+  color: purple;
+}
+.btn-visible:hover {
+  font-size: 20px;
+  width: 80px;
+  border-radius: 30px 20px;
+  border: 3px solid white;
+  background-color: purple;
+  color: #efefef;
+}
+
+.btn {
+  text-align: center;
+  font-size: 20px;
+  width: 80px;
+  border-radius: 30px 20px;
+  border: 3px solid purple;
+  background-color: #efefef;
+  color: purple;
+}
+.btn:hover {
+  border: 3px solid white;
+  background-color: purple;
+  color: white;
+}
+@media (max-width: 500px) {
+  .btn {
+    font-size: 18px;
+    width: 60px;
+  }
+}
+
+.big-btn {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 20px;
+  padding: 10px;
+  width: 160px;
+  border: 3px solid purple;
+  border-radius: 30px;
+  background-color: white;
+  color: purple;
+}
+.big-btn:hover {
+  border: 3px solid white;
+  background-color: purple;
+  color: white;
+}
+
+#btn-step1 {
+  display: none;
+  margin-left: 15%;
+}
+@media (max-width: 500px) {
+  #btn-step1 {
+    position: absolute;
+    top: 500px;
+  }
+}
+
+#btn-step2 {
+  display: none;
+  margin-left: 15%;
+}
+@media (max-width: 500px) {
+  #btn-step2 {
+    position: absolute;
+    top: 500px;
+  }
+}
+
+#btn-step3 {
+  display: none;
+  margin-left: 15%;
+}
+@media (max-width: 500px) {
+  #btn-step3 {
+    position: absolute;
+    top: 500px;
+  }
+}
+
+/*----------------Memory Game -----------------*/
+.btn-tab-step2, .btn-tab-step4, .btn-tab-M {
+  font-size: 20px;
+  width: 80px;
+  border-radius: 30px 20px;
+  border: 3px solid purple;
+  background-color: #efefef;
+  color: purple;
+}
+.btn-tab-step2:hover, .btn-tab-step4:hover, .btn-tab-M:hover {
+  font-size: 20px;
+  width: 80px;
+  border-radius: 30px 20px;
+  border: 3px solid white;
+  background-color: purple;
+  color: #efefef;
+}
+
+.btn-visible-step3, .btn-visible-step5 {
+  font-size: 20px;
+  width: 80px;
+  border-radius: 30px 20px;
+  border: 3px solid purple;
+  background-color: #efefef;
+  color: purple;
+}
+.btn-visible-step3:hover, .btn-visible-step5:hover {
+  font-size: 20px;
+  width: 80px;
+  border-radius: 30px 20px;
+  border: 3px solid white;
+  background-color: purple;
+  color: #efefef;
+}
+
+.btn-tab-step6 {
+  background-color: #efefef;
+  color: purple;
+  width: 110px;
+  font-size: 20px;
+  border-radius: 30px 20px;
+  border: 3px solid purple;
+}
+.btn-tab-step6:hover {
+  background-color: purple;
+  color: #efefef;
+  font-size: 20px;
+  border-radius: 30px 20px;
+  border: 3px solid white;
+}
+
+#btn-end-step2, #btn-end-step3 {
+  margin-left: 5%;
+  display: none;
+}
+
+#btn-end-step4, #btn-end-step5, #btn-end-step6 {
+  margin-left: 2%;
+  display: none;
+}
+
+#btn-start-step2, #btn-start-step3 {
+  margin-left: 5%;
+}
+
+#btn-start-step4, #btn-start-step5, #btn-start-step6 {
+  margin-left: 2%;
+}
+
+/*-----------------Memory et Lucky------------------*/
+#wrapper {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  text-align: center;
+  font-size: 25px;
+  padding: 15px 15px;
+  border: 10px solid white;
+  border-radius: 100px;
+  background-color: #d38e0e;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  margin: 5%;
+  width: 90%;
+  height: auto;
+  grid-row: span 6;
+  color: white;
+  font-weight: bold;
+}
+@media (min-width: 1300px) {
+  #wrapper {
+    grid-column-start: 4;
+    grid-column-end: 7;
+    grid-row-start: 4;
+    grid-row: span 4;
+    padding: 45px 75px;
+  }
+}
+@media (max-width: 500px) {
+  #wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px;
+    padding: 5px;
+    width: auto;
+    height: 250px;
+  }
+}
+
+/*-----------------Page D'accueil------------------*/
+#accueil-wrapper-left,
+#accueil-wrapper-right,
+#accueil-contact-wrapper {
+  grid-column: span 2;
+  text-align: center;
+  font-size: 25px;
+  padding: 35px;
+  border: 10px solid white;
+  border-radius: 100%;
+  background-color: #d38e0e;
+  height: auto;
+  color: white;
+  font-weight: bold;
+}
+
+#accueil-wrapper-left,
+#accueil-wrapper-right {
+  grid-row-start: 1;
+  grid-row-end: 6;
+}
+
+#accueil-contact-wrapper {
+  grid-column-end: 4;
+  grid-column-start: 2;
+  grid-row-start: 6;
+  grid-row-end: 11;
+  width: 80%;
+}
+
+#accueil-container {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+  justify-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #5e035e;
+}
+
+#container {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+  width: 100%;
+  height: 100vh;
+  background-color: #5e035e;
+}
+@media (min-width: 1300px) {
+  #container {
+    display: grid;
+    grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+  }
+}
+@media (max-width: 500px) {
+  #container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+#counter {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  color: white;
+  grid-row: span 1;
+  width: 60%;
+  font-size: 25px;
+}
+@media (min-width: 1300px) {
+  #counter {
+    /* grid-column-start: 1;
+    grid-column-end: 6;*/
+    grid-row-start: 3;
+    grid-column: span 4;
+    font-size: 30px;
+  }
+}
+@media (max-width: 500px) {
+  #counter {
+    margin: 25px;
+    margin-left: 5px;
+    font-size: 22px;
+    width: 80%;
+  }
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  grid-column-start: 4;
+  margin-top: 10px;
+  grid-row-start: 1;
+  width: 100%;
+  font-size: 25px;
+}
+nav .big-btn {
+  width: 135px;
+  border: 3px solid purple;
+  margin-top: 10px;
+  color: purple;
+}
+nav .big-btn:hover {
+  border: 3px solid white;
+  background-color: #d38e0e;
+  color: white;
+}
+
+/*-----------------Lucky Game------------------*/
+#rules {
+  grid-column: span 2;
+}
+
+#step1 {
+  grid-column: span 2;
+  text-align: center;
+  display: none;
+}
+
+.rules-step1 {
+  margin-top: 10px;
+}
+
+.tab-step1 {
+  margin-top: 10px;
+  width: 40%;
+  margin: 0 30%;
+}
+@media (max-width: 500px) {
+  .tab-step1 {
+    font-size: 20px;
+    width: 80px;
+    margin: 0 22%;
+  }
+}
+
+#step2 {
+  grid-column: span 2;
+  text-align: center;
+  display: none;
+}
+
+#step3 {
+  grid-column: span 2;
+  text-align: center;
+  display: none;
+}
+
+#step3 {
+  grid-column: span 2;
+  text-align: center;
+  display: none;
+}
+
+#end {
+  margin: 10%;
+  grid-column: span 2;
+  text-align: center;
+  display: none;
+}
+
+/*-----------------Memory Game------------------*/
+#rules1-step2, #rules1-step3, #rules1-step4, #rules1-step5, #rules1-step6 {
+  margin-top: 10px;
+}
+
+#rules2-step2 {
+  margin-top: 10px;
+  display: none;
+}
+
+#rules2-step3 {
+  margin-top: 10px;
+  display: none;
+}
+
+#rules2-step4 {
+  margin-top: 10px;
+  display: none;
+}
+
+#rules2-step5 {
+  margin-top: 10px;
+  display: none;
+}
+
+#step4 {
+  grid-column: span 2;
+  text-align: center;
+  display: none;
+}
+
+#step5 {
+  grid-column: span 2;
+  text-align: center;
+  display: none;
+}
+
+#step6 {
+  grid-column: span 2;
+  text-align: center;
+  display: none;
+}
+#step6 #tab-step6 {
+  display: flex;
+  flex-direction: column;
+}
+
+.tab {
+  margin-top: 10px;
+  width: 40%;
+  margin: 0 30%;
+}
+
+.big-tab {
+  margin-top: 10px;
+  width: 60%;
+  margin: 0 20%;
+}
+
+html,
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  color: white;
+  grid-row: span 1;
+}
+h1:hover {
+  text-decoration: underline;
+}
+@media (min-width: 1300px) {
+  h1 {
+    grid-column-start: 5;
+    grid-column-end: 7;
+    grid-row-start: 2;
+    font-size: 50px;
+    grid-column: span 10;
+  }
+}
+@media (max-width: 500px) {
+  h1 {
+    font-size: 40px;
+    margin: 50px 25px;
+  }
+}
+
+h2 {
+  margin: 5px;
+}
+
+/*# sourceMappingURL=style.css.map */
