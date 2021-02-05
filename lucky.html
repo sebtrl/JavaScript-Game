@@ -4,15 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./sass/style/style.css">
     <title>Document</title>
 </head>
 
 <body id='body'>
 
     <div id="container">
-        <h1 id="title-game"></a>Le jeu des cliques</h1>
+        
+        
+        <h1 id="title-game"></a>Lucky Game</h1>
         <div id="counter">
+            <p>Votre temps est :<span id="time"> 0</span></p>
             <label for="click" id='click-counter'class='click-counter'>Nombre de cliques effectués :</label> <span id="parent-count">0</span>
         </div>
         <main id="wrapper">
@@ -88,16 +91,21 @@
             </div>
             <div id="end">
                 <div id="rules-step-4">Felicitation vous avez terminer le jeu avec <span id='total-clique'></span>
-                    clique</div>
+                    cliques en <span id="finalTime"></span></div>
                     <input type="button" value="Rejouer" class="big-btn " id='btn-reset'>
-                    <input type="button" value="Page d'accueil" class="big-btn " id='btn-change' />
+                    
 
 
             </div>
 
 
         </main>
-
+<nav>
+    <a href="./accueil.html"><input class='big-btn' value='Page Accueil'></a>
+    <a href="./memory.html"><input class='big-btn' value='Memory Game'></a>
+    <a href="./contact.html"><input class='big-btn' value='Page Contact'></a>
+    
+</nav>
 
 
 

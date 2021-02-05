@@ -14,7 +14,7 @@ const parentCount = document.getElementById('parent-count');
 
 function parentOnClick() {
 
-
+//incremente le counter de click
 
 
        
@@ -31,14 +31,19 @@ let stepDisplayNone = false;
 const rules = document.getElementById('rules');
 
 btnStart.addEventListener('click', function () {
-        parent.addEventListener('click', parentOnClick)
+        //commence le jeu
+        parent.addEventListener('click',  parentOnClick)
+                //permet d'ecouter les click du document
+               
+       
         btnStart.style.display = 'none';
         stepDisplay(rules)
         stepDisplay(step1)
-        fisrtSteptab()
         
-        onClick()
+        
+        onClickStep1()
        
+       startTimer()
 });
 
 
@@ -49,7 +54,7 @@ btnStart.addEventListener('click', function () {
 const step1 = document.getElementById('step1')
 
 function stepDisplay(step) {
-
+//si une etape devient none la suivante deviendre un block
         if (stepDisplayNone === true) {
                 step.style.display = 'block';
                 stepDisplayNone = false;
@@ -60,10 +65,10 @@ function stepDisplay(step) {
 }
 
 
-let step1RandomNumber = 0;
 
 
 
+var tabStep1 = [0, 1, 2, 3, 4, 5];
 
 
 const tabBtn0 = document.getElementById('tab-btn0');
@@ -74,12 +79,12 @@ const tabBtn4 = document.getElementById('tab-btn4');
 const tabBtn5 = document.getElementById('tab-btn5');
 
 
-var tab = [1, 2, 3, 4, 5, 6];
 
-function fisrtSteptab() {
-        //step 1 random number button
+
+
+        
         function randomize(tab) {
-
+//melange le tableau de step1
                 let i;
                 let j;
                 let tmp;
@@ -99,22 +104,18 @@ function fisrtSteptab() {
                 return tab;
         }
 
-        tab = randomize(tab);
+      
 
-        tabBtn0.value = tab[0];
-        tabBtn1.value = tab[1];
-        tabBtn2.value = tab[2];
-        tabBtn3.value = tab[3];
-        tabBtn4.value = tab[4];
-        tabBtn5.value = tab[5];
+       
 
 
-}
+        
 
 
 const btnStep1 = document.getElementById('btn-step1');
 
 btnStep1.addEventListener('click', function () {
+//fais apparaitre step2
         stepDisplay(step1)
         stepDisplay(step2)
         functStep2()
@@ -126,131 +127,43 @@ function btnApear() {
         btnStep1.style.display = 'block';
 }
 
-let bool = true;
-function resetColorStep1(elt){
-        elt.style.color ='rgb(239, 239, 239)';
-}
-function over(elt){
-       
-        
-                elt.addEventListener('mouseenter', function(){
-                        elt.style.color ='purple';
-                        
-                })
-                elt.addEventListener('mouseleave', function(){
-                        elt.style.color ='rgb(239, 239, 239)';
-                })
-       
 
-}
-function unOver(elt){
-       
-        
-                elt.addEventListener('mouseenter', function(){
-                        elt.style.color ='rgb(239, 239, 239)';
-                        
-                })
-                elt.addEventListener('mouseleave', function(){
-                        elt.style.color ='purple';
-                })
-       
 
-}
-function onClick() {
-        // step 1 for make the next step appear
-        step1RandomNumber = Math.floor(Math.random() * 5 + 1);
-        const stepOneRandomNumber = document.getElementById('step-one-random-number');
-       
-                /* tabBtn0.style.color = 'rgb(239, 239, 239)';
-       tabBtn1.style.color = 'rgb(239, 239, 239)';
-        tabBtn2.style.color = 'rgb(239, 239, 239)';
-        tabBtn3.style.color = 'rgb(239, 239, 239)';
-        tabBtn4.style.color = 'rgb(239, 239, 239)';
-        tabBtn5.style.color = 'rgb(239, 239, 239)';*/
-        if(bool === true){
-                over(tabBtn0)
-                over(tabBtn1)
-                over(tabBtn2)
-                over(tabBtn3)
-                over(tabBtn4)
-                over(tabBtn5)
-        }else {
-               console.log('bool = ', bool)
-        }
-        
-        
-        
-        stepOneRandomNumber.innerHTML = step1RandomNumber;
-        
-        tabBtn0.onclick = () => {
-                console.log('cliquer1')
-                console.log(bool)
-                bool=false;
-                
-                        tabBtn0.style.color ='rgb(239, 239, 239)';
-                unOver(tabBtn0)
-                console.log(bool)
-                if (tab[0] === step1RandomNumber) {
-                        btnApear()
-                        
-                        
-                }
-        }
+let randomStep1;
 
-        tabBtn1.onclick = () => {
-                console.log('cliquer1')
-                bool=false;
-                tabBtn1.style.color ='rgb(239, 239, 239)';
-                unOver(tabBtn1)
-                if (tab[1] === step1RandomNumber) {
-                        btnApear()
-                        
-                }
-        }
-        tabBtn2.onclick = () => {
-                console.log('cliquer1')
-                bool=false;
-                tabBtn2.style.color ='rgb(239, 239, 239)';
-                unOver(tabBtn2)
-                if (tab[2] === step1RandomNumber) {
-                        btnApear()
-                       
-                }
-        }
-        tabBtn3.onclick = () => {
-                console.log('cliquer1')
-                bool=false;
-                tabBtn3.style.color ='rgb(239, 239, 239)';
-                unOver(tabBtn3)
-                if (tab[3] === step1RandomNumber) {
-                        btnApear()
-                        
-                }
-        }
-        tabBtn4.onclick = () => {
-                console.log('cliquer1')
-                bool=false;
-                tabBtn4.style.color ='rgb(239, 239, 239)';
-                unOver(tabBtn4)
-                if (tab[4] === step1RandomNumber) {
-                        btnApear()
-                        
-                }
-        }
-        tabBtn5.onclick = () => {
-                console.log('cliquer1')
-                bool=false;
-                tabBtn5.style.color ='rgb(239, 239, 239)';
-                unOver(tabBtn5)
-                if (tab[5] === step1RandomNumber) {
-                        btnApear()
-                        
-                }
-        }
+const tabBtnStep1 = document.querySelectorAll('.btn-tab');
+
+function onClickStep1(){
+        randomize(tabStep1);
+        tabBtn0.value = tabStep1[0];
+        tabBtn1.value = tabStep1[1];
+        tabBtn2.value = tabStep1[2];
+        tabBtn3.value = tabStep1[3];
+        tabBtn4.value = tabStep1[4];
+        tabBtn5.value = tabStep1[5];
+        console.log(randomize(tabStep1))
+     randomStep1 = Math.floor(Math.random()*5);
+     const stepOneRandomNumber = document.getElementById('step-one-random-number').innerHTML= randomStep1;
+     
+for(let i = 0; i< 6; i++){
+    console.log('avant',randomStep1,tabBtnStep1[i].value)
+    tabBtnStep1[i].onclick =() =>{
+        
+       tabBtnStep1[i].classList.replace('btn-tab','btn-visible');
+if(tabBtnStep1[i].value == randomStep1){
+    
+    
+   
+    console.log('apres',tabBtnStep1[i])
+ console.log('reussi')
+ btnApear()
+}
+    }
+    
+}
 
 
 }
-
 
 
 
@@ -261,6 +174,7 @@ function onClick() {
 
 const btnStep2 = document.getElementById('btn-step2')
 btnStep2.addEventListener('click', function () {
+        //fais apparaitre step3
         stepDisplay(step2)
         stepDisplay(step3)
 
@@ -273,16 +187,18 @@ function nextStep3Apear() {
 
 function functStep2() {
        
-        //step 2 for make the next step appear
+        //faire apparaitre btn-step2
         let randomNumber = Math.floor(Math.random() * 3);
         const btn1 = document.getElementById('btn-1');
         const btn2 = document.getElementById('btn-2');
         const btn3 = document.getElementById('btn-3');
+
         btn1.value = '1';
         btn2.value = '2';
         btn3.value = '3';
 
         console.log(randomNumber)
+        //choisi quelque btn fera apparaitre le btnStep2
         btn1.onclick = () => {
                 if (randomNumber === 0) {
                         nextStep3Apear()
@@ -317,12 +233,16 @@ function functStep2() {
 const btnStep3 = document.getElementById('btn-step3')
 
 btnStep3.addEventListener('click', function () {
+        //fais apparaitre step4
         stepDisplay(step3)
         stepDisplay(end)
 
-
+        stopTimer()
         totalClick.innerHTML = parentClick + 1;
         parent.removeEventListener('click', parentOnClick)
+        
+        parentOnClick()
+        const finalTime = document.getElementById('finalTime').innerHTML=time.innerHTML;
 
         
 
@@ -340,8 +260,7 @@ function nextStep4Apear() {
 
 
 function witchBtnStep3() {
-        /*this function it's for know witch btn go to the next step 
-        and witch btn go back to the begining*/
+        //choisi de maniere aleatoire quelque btn renvoie a l'etape 1 et lequel au step4
         const btn1 = document.getElementById('btn1-step-3');
         const btn2 = document.getElementById('btn2-step-3');
         const randomNumber = Math.floor(Math.random() * 2);
@@ -374,15 +293,12 @@ const btnReset = document.getElementById('btn-reset')
 
 
 btnReset.addEventListener('click', reset)
-
+let resetTime = false;
+//resetTime sert a remettre le timer a 0 si la partie et rejouer
 function reset() {
-        bool=true;
-        resetColorStep1(tabBtn0)
-        resetColorStep1(tabBtn1)
-        resetColorStep1(tabBtn2)
-        resetColorStep1(tabBtn3)
-        resetColorStep1(tabBtn4)
-        resetColorStep1(tabBtn5)
+        //reset le jeu pour recomencer a zero
+        tabBtnStep1.forEach(elt=> elt.classList.replace('btn-visible','btn-tab'))
+       
         stepDisplay(end)
         stepDisplay(rules)
         btnStart.style.display = 'inline-block';
@@ -391,26 +307,59 @@ function reset() {
         btnStep2.style.display = 'none';
         btnStep3.style.display = 'none';
         parentCount.innerHTML = 0;
-        parentClick = 0;
-        parent.removeEventListener('click', parentOnClick)
+        console.log(parentClick)
+        parentClick= 0;
+        console.log(parentClick)
+        time.innerHTML = ' 0' ;
+resetTime = true;
 }
 function backToStep1() {
-        bool=true;
-        resetColorStep1(tabBtn0)
-        resetColorStep1(tabBtn1)
-        resetColorStep1(tabBtn2)
-        resetColorStep1(tabBtn3)
-        resetColorStep1(tabBtn4)
-        resetColorStep1(tabBtn5)
+        // btn pour revenir ay step1 en cas d'echec du step3
+        
+        randomize(tabStep1);
+        tabBtnStep1.forEach(elt=> elt.classList.replace('btn-visible','btn-tab'))
+        onClickStep1()
         stepDisplay(step3)
         stepDisplay(step1)
-        fisrtSteptab()
-        
-        onClick()
-        
         btnStep1.style.display = 'none';
         btnStep2.style.display = 'none';
         btnStep3.style.display = 'none';
         
 }
 
+
+let seconds=0;
+let minutes =0;
+let time =document.getElementById('time');
+var sec = 0;
+let setTime = 0;
+function startTimer(){
+        //commence le timer
+        setTime = setInterval( timer, 1000)
+}
+
+    function pad ( val ) { 
+            return val > 9 ? val : "0" + val; 
+        }
+     function timer(){
+         if(resetTime === false){ 
+                     seconds = pad(++sec%60);
+                     minutes = pad(parseInt(sec/60,10));
+                     time.innerHTML = `${minutes}:${seconds}`;
+
+         }else if (resetTime=== true){
+                sec= 0;
+                 seconds = pad(++sec%60);
+                 minutes = pad(parseInt(sec/60,10));
+                 time.innerHTML = `${minutes}:${seconds}`;
+                 resetTime =false;
+         }
+                
+
+    }
+    function stopTimer(){
+            //arret le timer
+            clearInterval(setTime);
+    }
+
+   

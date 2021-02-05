@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../sass/style/style.css">
+    <title>Document</title>
+</head>
+
+<body id='body'>
+
+    <div id="container">
+
+
+        <h1 id="title-game"></a>Memory Game</h1>
+        <div id="counter">
+            <p>Votre temps est :<span id="time"> 0</span></p>
+            <label for="click" id='click-counter' class='click-counter'>Nombre de cliques effectués :</label> <span
+                id="parent-count">0</span>
+        </div>
+        <main id="wrapper">
+
+            <div id="rules">
+
+
+
+
+
+                <p>Voulez vous tester votre memoire le but est de finir
+                    le jeu avec le moins de cliques au compteur.</p>
+
+
+
+                <input type="button" value="Commencer" class='big-btn' id="btn-start" />
+
+
+
+
+            </div>
+
+            <div id="step1">
+                <h2 id="titre-1">Première etape</h2>
+
+                <p class='rules-step1'>retenez :
+                    <span id='first-step-num'></span>
+                </p>
+
+
+
+                <input type="button" value="Étape suivante" class="big-btn " id='btn-end-step1' />
+            </div>
+            <div id="step2">
+                <h2 id="titre-2">Deuxième étape</h2>
+
+                <p id="rules1-step2">Tentez de retenir un maximum d'emplacement </p>
+                    <p id="rules2-step2">Trouver le <span id='step2-random-number'></span> dans les cases suivantes</p>
+
+                <table class='tab'>
+                    <tr>
+                        <td><input type="button" value="#" class="btn-tab-step2" id="step2-tab-btn0" /></td>
+                        <td><input type="button" value="#" class="btn-tab-step2" id="step2-tab-btn1" /></td>
+                        <td><input type="button" value="#" class="btn-tab-step2" id="step2-tab-btn2" /></td>
+
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="#" class="btn-tab-step2" id="step2-tab-btn3" /></td>
+                        <td><input type="button" value="#" class="btn-tab-step2" id="step2-tab-btn4" /></td>
+                        <td><input type="button" value="#" class="btn-tab-step2" id="step2-tab-btn5" /></td>
+
+                    </tr>
+
+
+                </table>
+
+                <input type="button" value="Commencer" class="big-btn" id="btn-start-step2" />
+                <input type="button" value="Étape suivante" class="big-btn" id="btn-end-step2" />
+            </div>
+
+            <div id="step3">
+                <h2 id="titre-3">Troisième étape</h2>
+                <p id="rules1-step3"> Tentez de retenir un maximum de symboles  </p>
+                    <p id="rules2-step3">Quel symbole vient d'aparaitre?</p>
+               
+                <table class='tab'>
+                    <tr>
+                        <td><input type="button" value="#" class=" btn-visible-step3" id="step3-tab-btn0" /></td>
+                        <td><input type="button" value="#" class="btn-visible-step3" id="step3-tab-btn1" /></td>
+                        <td><input type="button" value="#" class="btn-visible-step3" id="step3-tab-btn2" /></td>
+
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="#" class="btn-visible-step3" id="step3-tab-btn3" /></td>
+                        <td><input type="button" value="#" class="btn-visible-step3" id="step3-tab-btn4" /></td>
+                        <td><input type="button" value="#" class="btn-visible-step3" id="step3-tab-btn5" /></td>
+                        <td><input type="button" value="#" class="btn-visible-step3" id="step3-tab-btn6" /></td>
+
+                    </tr>
+
+
+                </table>
+                <input type="button" value="Commencer" class="big-btn" id="btn-start-step3" />
+                <input type="button" value="Étape suivante" class="big-btn " id='btn-end-step3' />
+
+            </div>
+            <div id="step4">
+                <h2 id="titre-4">Quatrième étape</h2>
+                <p id="rules1-step4"> Tentez de retenir un maximum d'emplacement  </p>
+                    <p id="rules2-step4">Trouver le <span id='step4-random-number'></span> dans les cases suivantes</p>
+                <table class="big-tab">
+                    <tr>
+                        <td><input type="button" value="#" class="btn-tab-step4" id="step4-tab-btn0" /></td>
+                        <td><input type="button" value="#" class="btn-tab-step4" id="step4-tab-btn1" /></td>
+                        <td><input type="button" value="#" class="btn-tab-step4" id="step4-tab-btn2" /></td>
+                        <td><input type="button" value="#" class="btn-tab-step4" id="step4-tab-btn3" /></td>
+
+                    </tr>
+                    <tr> 
+                        <td><input type="button" value="#" class="btn-tab-step4" id="step4-tab-btn4" /></td>
+                        <td><input type="button" value="#" class="btn-tab-step4" id="step4-tab-btn5" /></td>
+                        <td><input type="button" value="#" class="btn-tab-step4" id="step4-tab-btn6" /></td>
+                        <td><input type="button" value="#" class="btn-tab-step4" id="step4-tab-btn7" /></td>
+
+                    </tr>
+                    </table>
+                    <input type="button" value="Commencer" class="big-btn" id="btn-start-step4" />
+                    <input type="button" value="Étape suivante" class="big-btn " id='btn-end-step4' />
+
+            </div>
+
+            <div id="step5">
+                <h2 id="titre-5">Cinquième étape</h2>
+                <p id="rules1-step5"> Tentez de retenir un maximum de symboles </p>
+                    <p id="rules2-step5">Quel symbole vient d'aparaitre?</p>
+                <table class='big-tab'>
+                    <tr>
+                        <td><input type="button" value="#" class=" btn-visible-step5" id="step5-tab-btn0" /></td>
+                        <td><input type="button" value="#" class="btn-visible-step5" id="step5-tab-btn1" /></td>
+                        <td><input type="button" value="#" class="btn-visible-step5" id="step5-tab-btn2" /></td>
+                        <td><input type="button" value="#" class="btn-visible-step5" id="step5-tab-btn3" /></td>
+
+                    </tr>
+                    <tr>
+                        
+                        <td><input type="button" value="#" class="btn-visible-step5" id="step5-tab-btn4" /></td>
+                        <td><input type="button" value="#" class="btn-visible-step5" id="step5-tab-btn5" /></td>
+                        <td><input type="button" value="#" class="btn-visible-step5" id="step5-tab-btn6" /></td>
+                        <td><input type="button" value="#" class="btn-visible-step5" id="step5-tab-btn7" /></td>
+                        <td><input type="button" value="#" class="btn-visible-step5" id="step5-tab-btn8" /></td>
+
+                    </tr>
+
+
+                </table>
+                <input type="button" value="Commencer" class="big-btn" id="btn-start-step5" />
+                <input type="button" value="Étape suivante" class="big-btn " id='btn-end-step5' />
+
+            </div>
+            
+            <div id="step6">
+                <h2 id="titre6">Septième étape</h2>
+
+
+                
+                <table class="big-tab">
+                    <tr>
+                        <td><input type="button" value="#" class="btn-tab-step6" id="step6-btn-tab-0" /></td>
+                        <td><input type="button" value="#" class="btn-tab-step6" id="step6-btn-tab-1" /></td>
+                        <td><input type="button" value="#" class="btn-tab-step6" id="step6-btn-tab-2" /></td>
+                        </tr>
+                        <tr>
+                        <td><input type="button" value="#" class="btn-tab-step6" id="step6-btn-tab-3" /></td>
+                        <td><input type="button" value="#" class="btn-tab-step6" id="step6-btn-tab-4" /></td>
+                        <td><input type="button" value="#" class="btn-tab-step6" id="step6-btn-tab-5" /></td>
+                    </tr>
+
+                    
+                    
+
+
+
+                </table>
+                <input type="button" value="Étape suivante" class="big-btn " id='btn-end-step6' />
+            </div>
+
+            <div id="end">
+                <div id="rules-step-end">Felicitation vous avez terminer le jeu avec <span id='total-clique'></span>
+                    cliques en <span id="finalTime"></span></div>
+                <input type="button" value="Rejouer" class="big-btn " id='btn-reset'>
+                
+
+
+            </div>
+
+
+        </main>
+        <nav>
+            <a href="./accueil.html"><input class='big-btn' value='Page Accueil'></a>
+            <a href="./lucky.html"><input class='big-btn' value='Lucky Game'></a>
+            <a href="./contact.html"><input class='big-btn' value='Page Contact'></a>
+
+        </nav>
+
+
+
+    </div>
+    <script type="text/javascript" src="./js/memory/memory.js"></script>
+</body>
+
+</html>
