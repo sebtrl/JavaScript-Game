@@ -4,12 +4,7 @@
     grid-column: span 2;
 }
 
-#step1 {
-    grid-column: span 2;
-    text-align: center;
-    display: none;
 
-}
 
 .rules-step1 {
     margin-top: 10px;
@@ -24,38 +19,25 @@
 
 
         font-size: 20px;
-        width: 80px;
+        width: 70%;
 
-        margin: 0 22%;
+        margin: 0 15%;
 
 
     }
 }
 
-#step2 {
+#step1,#step2,#step3,#end,#step4,#step5,#step6{
     grid-column: span 2;
     text-align: center;
     display: none;
 }
 
-#step3 {
-    grid-column: span 2;
-    text-align: center;
-    display: none;
-}
 
-#step3 {
-    grid-column: span 2;
-    text-align: center;
-    display: none;
-}
 
 #end {
     margin: 10%;
-    grid-column: span 2;
-
-    text-align: center;
-    display: none;
+    
 }
 
 /*-----------------Memory Game------------------*/
@@ -63,57 +45,75 @@
     margin-top: 10px;
     
 }
-#rules2-step2 {
+#rules2-step2 ,#rules2-step3,#rules2-step4,#rules2-step5{
     margin-top: 10px;
     display: none;
 }
-#rules2-step3 {
-    margin-top: 10px;
-    display: none;
-}
-#rules2-step4 {
-    margin-top: 10px;
-    display: none;
-}
-
-
-#rules2-step5 {
-    margin-top: 10px;
-    display:none;
-}
-#step4 {
-    grid-column: span 2;
-    text-align: center;
-    display: none;
-}
-
-#step5 {
-    grid-column: span 2;
-    text-align: center;
-    display: none;
-}
-
-#step6 {
-    grid-column: span 2;
-    text-align: center;
-    display: none;
-
-    #tab-step6 {
+  #tab-step6 {
         display: flex;
         flex-direction: column;
     }
-
-    
-    
-}
 
 .tab{
     margin-top: 10px;
     width: 40%;
     margin: 0 30%;
+    @media (max-width:500px) {
+
+
+        font-size: 20px;
+        width: 70%;
+
+        margin: 0 15%;
+
+
+    }
 }
 .big-tab{
     margin-top: 10px;
     width: 60%;
     margin: 0 20%;
+    @media (max-width:500px) {
+
+
+        font-size: 20px;
+        width: 74%;
+
+        margin: 0 13%;
+
+
+    }
 }
+.big-tab-step5{
+    margin-top: 10px;
+    width: 60%;
+    margin: 0 20%;
+    @media (max-width:500px) {
+
+
+        font-size: 20px;
+        width: 74%;
+
+        margin: 0 13%;
+
+
+    }
+}
+.new-big-tab-step5{
+    margin-top: 10px;
+    width: 60%;
+    margin: 0 20%;
+    @media (max-width:500px) {
+
+
+        font-size: 20px;
+        width: 80%;
+
+        margin: 0 11% 0 4%;
+
+
+    }
+}
+
+
+

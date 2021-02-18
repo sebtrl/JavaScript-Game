@@ -15,10 +15,10 @@
         
         <h1 id="title-game"></a>Lucky Game</h1>
         <div id="counter">
-            <p>Votre temps est :<span id="time"> 0</span></p>
-            <label for="click" id='click-counter'class='click-counter'>Nombre de cliques effectués :</label> <span id="parent-count">0</span>
+            <p>Votre temps est : <span id="time"> 00:00:00</span></p>
+            <label for="click" id='click-counter'class='click-counter'>Cliques effectués :</label> <span id="parent-count">0</span>
         </div>
-        <main id="wrapper">
+        <main class="wrapper game main-body">
             
             <div id="rules">
 
@@ -46,15 +46,15 @@
 
                 <table class='tab-step1' >
                     <tr>
-                        <td><input type="button" value="#" class=" btn-tab" id="tab-btn0" /></td>
-                        <td><input type="button" value="#" class="btn-tab" id="tab-btn1" /></td>
-                        <td><input type="button" value="#" class="btn-tab" id="tab-btn2" /></td>
+                        <td><input type="button" value="#" class=" btn btn-tab" id="tab-btn0" /></td>
+                        <td><input type="button" value="#" class="btn btn-tab" id="tab-btn1" /></td>
+                        <td><input type="button" value="#" class=" btn btn-tab" id="tab-btn2" /></td>
 
                     </tr>
                     <tr>
-                        <td><input type="button" value="#" class="btn-tab" id="tab-btn3" /></td>
-                        <td><input type="button" value="#" class="btn-tab" id="tab-btn4" /></td>
-                        <td><input type="button" value="#" class="btn-tab" id="tab-btn5" /></td>
+                        <td><input type="button" value="#" class="btn btn-tab" id="tab-btn3" /></td>
+                        <td><input type="button" value="#" class="btn btn-tab" id="tab-btn4" /></td>
+                        <td><input type="button" value="#" class="btn btn-tab" id="tab-btn5" /></td>
 
                     </tr>
 
@@ -71,9 +71,9 @@
 
                 <div class="wrapper-input-step2">
 
-                    <input type="button" value="1" class="btn" id="btn-1" />
-                    <input type="button" value="2" class="btn" id="btn-2" />
-                    <input type="button" value="3" class="btn" id="btn-3" />
+                    <input type="button" value="1" class="btn small-btn" id="btn-1" />
+                    <input type="button" value="2" class="btn small-btn" id="btn-2" />
+                    <input type="button" value="3" class="btn small-btn" id="btn-3" />
                 </div>
                 <input type="button" value="Étape suivante" class="big-btn " id='btn-step2' />
             </div>
@@ -84,8 +84,8 @@
                     revenir en arrière.</p>
 
                 <div class="div-2-choice">
-                    <input type="button" value="ok" class="btn " id='btn1-step-3'>
-                    <input type="button" value="ok" class="btn " id='btn2-step-3' />
+                    <input type="button" value="ok" class="btn small-btn " id='btn1-step-3'>
+                    <input type="button" value="ok" class="btn small-btn" id='btn2-step-3' />
                 </div>
                 <input type="button" value="Étape suivante" class="big-btn " id='btn-step3' />
             </div>
@@ -101,10 +101,13 @@
 
         </main>
 <nav>
-    <a href="./accueil.html"><input class='big-btn' value='Page Accueil'></a>
-    <a href="./memory.html"><input class='big-btn' value='Memory Game'></a>
-    <a href="./contact.html"><input class='big-btn' value='Page Contact'></a>
     
+    <div class="nav-wrapper">
+        <a href="./accueil.html"><input class='big-btn' value='Page Accueil'></a>
+    <a href="./memory.html"><input class='big-btn' value='Memory Game'></a>
+    <a href="./twin.html"><input class='big-btn' value='Twin Game'></a>
+    <a href="./contact.html"><input class='big-btn' value='Page Contact'></a>
+    </div>
 </nav>
 
 

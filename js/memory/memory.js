@@ -1,9 +1,5 @@
 //click system 
 
-
-
-
-
 const btnStart = document.getElementById('btn-start');
 let parentClick = 0;
 
@@ -30,7 +26,7 @@ function parentOnClick() {
 let stepDisplayNone = false;
 
 function stepDisplay(step) {
-    //si une etape devient none la suivante deviendre un block
+    //si une etape devient none la suivante deviendra un block
     if (stepDisplayNone === true) {
         step.style.display = 'block';
         stepDisplayNone = false;
@@ -39,24 +35,45 @@ function stepDisplay(step) {
         stepDisplayNone = true;
     }
 }
+//timer
 
-const rules = document.getElementById('rules');
 
-let startStep2;
+let seconds=0;
+let minutes =0;
+let hours = 0;
+let time =document.getElementById('time');
+var sec = 0;
+let setTime = 0;
 
-btnStart.addEventListener('click', function () {
-    //commence le jeu
-    parent.addEventListener('click', parentOnClick)
-    btnStart.style.display = 'none';
-    stepDisplay(rules)
-    stepDisplay(step1)
+function timer(){
+seconds += 1;
+if(seconds > 60){
+        seconds=0;
+minutes +=1;
+}else if(minutes > 60){
+        minutes = 0;
+     hours +=1;   
+}
+return time.innerHTML = zero(hours)+':'+zero(minutes) +':'+ zero(seconds);
 
-    stepOneRandomNumber();
+}
 
-    startTimer()
-    Maketab()
-    startStep2 = false;
-});
+ function zero(num){
+if(num < 10){
+        return '0'+num;
+}else {
+        return num
+}
+
+ }
+ function resetTimer(){
+         seconds=0;
+ minutes =0;
+ hours = 0; 
+ return time.innerHTML = zero(hours)+':'+zero(minutes) +':'+ zero(seconds);
+ }
+
+
 
 function randomize(tab) {
     //melange un tableau 
@@ -77,6 +94,27 @@ function randomize(tab) {
     }
     return tab;
 }
+
+const rules = document.getElementById('rules');
+let startStep2;
+var startTimer;
+
+
+btnStart.addEventListener('click', function () {
+    //commence le jeu
+    parent.addEventListener('click', parentOnClick)
+    btnStart.style.display = 'none';
+    stepDisplay(rules)
+    stepDisplay(step1)
+
+    stepOneRandomNumber();
+
+  startTimer = setInterval(timer, 1000);
+    Maketab()
+    startStep2 = false;
+});
+
+
 
 
 //step 1
@@ -412,6 +450,7 @@ btnEndStep5.addEventListener('click', function () {
     stepDisplay(step5)
     stepDisplay(step6)
     console.log('step5', stepDisplayNone)
+    tabStep5.classList.replace('new-big-tab-step5','big-tab-step5')
 })
 
 
@@ -429,11 +468,15 @@ let symboleStep5;
 const rules1Step5 = document.getElementById('rules1-step5')
 const rules2Step5 = document.getElementById('rules2-step5')
 const btnStartStep5 = document.querySelector('#btn-start-step5')
+
+const tabStep5 = document.querySelector('.big-tab-step5')
 btnStartStep5.addEventListener('click', function () {
     onClickStep5()
     btnStartStep5.style.display = 'none';
     rules1Step5.style.display = 'none';
     rules2Step5.style.display = 'block';
+    tabStep5.classList.replace('big-tab-step5','new-big-tab-step5')
+
 })
 
 
@@ -523,12 +566,13 @@ btnEndStep6.addEventListener('click', function () {
     stepDisplay(step6)
     stepDisplay(end)
     console.log('step6', stepDisplayNone)
-    stopTimer()
+    
     totalClick.innerHTML = parentClick + 1;
     parent.removeEventListener('click', parentOnClick)
     const finalTime = document.getElementById('finalTime').innerHTML = time.innerHTML;
 
     parentOnClick()
+    clearInterval(startTimer)
 })
 
 let tabStep6 = [];
@@ -633,53 +677,22 @@ function reset() {
     btnStep2.forEach(elt => elt.classList.replace('btn-tab', 'btn-tab-step2'))
     btnStep4.forEach(elt => elt.classList.replace('btn-tab', 'btn-tab-step4'))
     parentCount.innerHTML = 0;
-    console.log(parentClick)
+    
     parentClick = 0;
-    console.log(parentClick)
+   
 
-    time.innerHTML = ' 0';
-    resetTime = true;
+    
+    resetTimer()
 }
 
+party.element(end, {
+    count: 40,
+    countVariation: 0.5,
+    angleSpan: 80,
+    yVelocity: -300,
+    yVelocityVariation: 1,
+    rotationVelocityLimit: 6,
+    scaleVariation: 0.8
+  });
 
 
-
-//timer
-let resetTime = false;
-
-let seconds = 0;
-let minutes = 0;
-let time = document.getElementById('time');
-var sec = 0;
-let setTime = 0;
-
-function startTimer() {
-    //commence le timer
-    setTime = setInterval(timer, 1000)
-}
-
-function pad(val) {
-    return val > 9 ? val : "0" + val;
-}
-
-function timer() {
-    if (resetTime === false) {
-        seconds = pad(++sec % 60);
-        minutes = pad(parseInt(sec / 60, 10));
-        time.innerHTML = `${minutes}:${seconds}`;
-
-    } else if (resetTime === true) {
-        sec = 0;
-        seconds = pad(++sec % 60);
-        minutes = pad(parseInt(sec / 60, 10));
-        time.innerHTML = `${minutes}:${seconds}`;
-        resetTime = false;
-    }
-
-
-}
-
-function stopTimer() {
-    //arret le timer
-    clearInterval(setTime);
-}

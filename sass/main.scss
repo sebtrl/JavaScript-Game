@@ -16,7 +16,9 @@ body {
     padding: 0;
 }
 
-
+a{
+    width:160px;
+}
 
 
 
@@ -43,9 +45,9 @@ h1 {
     @media (max-width:500px) {
    
 
-      
+      order:5;
             font-size: 40px;
-            margin: 50px 25px;
+            margin: 20px 25px;
     
     
         }

@@ -1,8 +1,7 @@
-
-
 nav {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: right;
     grid-column-start: 4;
     margin-top: 10px;
     ;
@@ -11,22 +10,65 @@ nav {
 
     width: 100%;
     font-size: 25px;
-
+    .nav-wrapper{
+        display: flex;
+        flex-direction: column;
+       
+    }
     .big-btn {
         width: 135px;
         border: 3px solid purple;
         margin-top: 10px;
-        ;
-    
+        font-weight: bold;
+
         color: purple;
 
         &:hover {
 
             border: 3px solid white;
-        
+
             background-color: rgb(211, 142, 14);
             color: white;
         }
+    }
+
+    @media (min-width:1300px) {
+
+        grid-column-start: 9;
+        grid-column-end: 10;
+
+
+        grid-row: span 2;
+        grid-row-start: 3;
+
+
+    }
+
+    @media (max-width:500px) {
+        margin: 5px 5%;
+        flex-direction: row;
+
+        justify-content: center;
+        width: 90%;
+
+        
+        .big-btn {
+font-size: 13px;
+        width: 90px;
+        border: 3px solid purple;
+        margin-top: 10px;
+        ;
+
+        color: purple;
+
+        &:hover {
+
+            border: 3px solid white;
+
+            background-color: rgb(211, 142, 14);
+            color: white;
+        }
+    }
     }
 }
 

@@ -43,7 +43,7 @@ btnStart.addEventListener('click', function () {
         
         onClickStep1()
        
-       startTimer()
+        startTimer = setInterval(timer, 1000);
 });
 
 
@@ -237,13 +237,13 @@ btnStep3.addEventListener('click', function () {
         stepDisplay(step3)
         stepDisplay(end)
 
-        stopTimer()
+       
         totalClick.innerHTML = parentClick + 1;
         parent.removeEventListener('click', parentOnClick)
         
         parentOnClick()
         const finalTime = document.getElementById('finalTime').innerHTML=time.innerHTML;
-
+        clearInterval(startTimer)
         
 
 })
@@ -293,8 +293,8 @@ const btnReset = document.getElementById('btn-reset')
 
 
 btnReset.addEventListener('click', reset)
-let resetTime = false;
-//resetTime sert a remettre le timer a 0 si la partie et rejouer
+
+
 function reset() {
         //reset le jeu pour recomencer a zero
         tabBtnStep1.forEach(elt=> elt.classList.replace('btn-visible','btn-tab'))
@@ -310,8 +310,8 @@ function reset() {
         console.log(parentClick)
         parentClick= 0;
         console.log(parentClick)
-        time.innerHTML = ' 0' ;
-resetTime = true;
+        resetTimer()
+
 }
 function backToStep1() {
         // btn pour revenir ay step1 en cas d'echec du step3
@@ -326,40 +326,50 @@ function backToStep1() {
         btnStep3.style.display = 'none';
         
 }
-
+/*-----------------timer------------------ */
 
 let seconds=0;
 let minutes =0;
+let hours = 0;
 let time =document.getElementById('time');
 var sec = 0;
 let setTime = 0;
-function startTimer(){
-        //commence le timer
-        setTime = setInterval( timer, 1000)
+
+
+
+var startTimer;
+
+function timer(){
+seconds += 1;
+if(seconds > 60){
+        seconds=0;
+minutes +=1;
+}else if(minutes > 60){
+        minutes = 0;
+     hours +=1;   
+}
+return time.innerHTML = zero(hours)+':'+zero(minutes) +':'+ zero(seconds);
+
 }
 
-    function pad ( val ) { 
-            return val > 9 ? val : "0" + val; 
-        }
-     function timer(){
-         if(resetTime === false){ 
-                     seconds = pad(++sec%60);
-                     minutes = pad(parseInt(sec/60,10));
-                     time.innerHTML = `${minutes}:${seconds}`;
+ function zero(num){
+if(num < 10){
+        return '0'+num;
+}else {
+        return num
+}
 
-         }else if (resetTime=== true){
-                sec= 0;
-                 seconds = pad(++sec%60);
-                 minutes = pad(parseInt(sec/60,10));
-                 time.innerHTML = `${minutes}:${seconds}`;
-                 resetTime =false;
-         }
-                
+ }
+ function resetTimer(){
+         seconds=0;
+ minutes =0;
+ hours = 0; 
+ return time.innerHTML = zero(hours)+':'+zero(minutes) +':'+ zero(seconds);
+ }
 
-    }
-    function stopTimer(){
-            //arret le timer
-            clearInterval(setTime);
-    }
+
+
+
+
 
    

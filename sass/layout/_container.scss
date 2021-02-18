@@ -3,7 +3,7 @@
 #accueil-container {
     text-align: center;
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
     grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
     justify-items: center;
     width: 100%;
@@ -14,7 +14,7 @@
 #container {
     text-align: center;
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-columns: 20% 30% 30% 20%;
     grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
 
     width: 100%;
@@ -34,9 +34,18 @@
            
         
                 display: flex;
-                flex-direction: column;
+                flex-direction: column-reverse;
+                justify-content: space-around;
         
         
         
             }
 }
+#container-twin{
+
+    display:grid;
+    grid-template-columns: 25% 1fr 15%;
+    grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    background-color: rgb(94, 3, 94);
+    
+    }

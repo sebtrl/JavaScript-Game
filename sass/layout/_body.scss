@@ -1,23 +1,189 @@
-
-/*-----------------Memory et Lucky------------------*/
-#wrapper {
-    display: grid;
-    grid-template-columns: 50% 50%;
-
-    text-align: center;
-    font-size: 25px;
-    padding: 15px 15px;
+/*----------------------------------Global------------------------------------*/
+.wrapper {
     border: 10px solid white;
-    border-radius: 100px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
     background-color: rgb(211, 142, 14);
+    font-size: 25px;
+    
+    
+    height: auto;
+    margin:5% 10%;
+    @media (min-width:1300px) {
+ 
+
+    }
+
+@media (max-width:500px) {
+
+
+   
+    }
+    
+}
+.main-body{
+     padding: 15px 15px;
+    width: 80%;
+    border-radius: 100px;
     grid-column-start: 2;
     grid-column-end: 4;
+   grid-row: span 6;
+    
+    @media (min-width:1300px) {
+ 
+        grid-column-start: 4;
+        grid-column-end: 7;
+        grid-row-start: 4;
 
-    margin: 5%;
-    width: 90%;
-    height: auto;
-    grid-row: span 6;
-    color: white;
+        grid-row: span 4;
+        padding: 45px 75px;
+
+    }
+
+@media (max-width:500px) {
+
+
+   font-size: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        margin: 10px;
+        padding: 15px;
+        
+        width: auto;
+        height: 250px;
+    }
+    
+}
+
+
+
+/*-----------------Memory et Lucky------------------*/
+
+.game{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+/*-----------------Page D'accueil------------------*/
+#accueil-wrapper-left,
+#accueil-wrapper-right,
+#accueil-contact-wrapper {
+    grid-column: span 5;
+    padding: 35px;
+    border: 10px solid white;
+  
+}
+
+#accueil-wrapper-left,
+#accueil-wrapper-right {
+   
+    grid-row-start: 1;
+    grid-row-end: 6;
+}
+#accueil-wrapper-left {
+    grid-column-end: 6;
+    grid-column-start: 3;
+    border-radius: 10% 50% 0% 90%;
+
+    @media (min-width:1300px) {
+        grid-column: span 2;
+ 
+        grid-column-start: 4;
+        grid-column-end: 6;
+        grid-row-start: 2;
+
+       
+        padding: 45px 75px;
+
+    }
+
+@media (max-width:500px) {
+    border-radius: 80%;
+   
+   font-size: 20px;
+   grid-column-start: 3;
+   grid-column-end: 9;
+   grid-row-start: 1;
+   grid-row-end: 4;
+    }
+}
+#accueil-wrapper-right {
+    grid-column-end: 9;
+    grid-column-start:6 ;
+    border-radius: 50% 10% 90% 0%;
+    @media (min-width:1300px) {
+        grid-column: span 2;
+        grid-column-start: 6;
+        grid-column-end: 8;
+        grid-row-start: 2;
+
+       
+        padding: 45px 75px;
+
+    }
+
+@media (max-width:500px) {
+    border-radius: 80%;
+
+   font-size: 20px;
+   grid-column-start: 3;
+   grid-column-end: 9;
+   grid-row-start: 4;
+   grid-row-end: 7;
+    }
+}
+#accueil-contact-wrapper {
+    grid-column-end: 7;
+    grid-column-start: 5;
+    border-radius: 10% 10% 70% 70%;
+    grid-row-start: 6;
+    grid-row-end: 11;
+    width: 100%;
+    @media (min-width:1300px) {
+ 
+        grid-column-start: 5;
+        grid-column-end: 7;
+        grid-row-start: 6;
+        grid-row-end: 9;
+
+        
+        padding: 45px 75px;
+
+    }
+
+@media (max-width:500px) {
+
+    border-radius: 80%;
+   font-size: 20px;
+   grid-column-start: 3;
+   grid-column-end: 9;
+   grid-row-start: 7;
+   grid-row-end: 10;
+   width: 80%;
+    }
+    
+}
+
+/*---------------------------twin-----------------*/
+
+.twin-game {
+    padding: 10px;
+    justify-items: center;
+    grid-column-start: 2;
+    grid-column-end:  4;
+    grid-row-start: 2;
+    grid-row: span 8;
+text-align: center;
+ 
+    font-size: 25px;
+ 
+   #start{
+       margin: 20px 0 ;
+   }
+   
     font-weight: bold;
     @media (min-width:1300px) {
  
@@ -25,7 +191,7 @@
             grid-column-end: 7;
             grid-row-start: 4;
     
-            grid-row: span 4;
+            grid-row: span 5;
             padding: 45px 75px;
     
         }
@@ -33,52 +199,67 @@
     @media (max-width:500px) {
    
 
-       
+       font-size: 20px;
             display: flex;
             flex-direction: column;
             justify-content: center;
     
             margin: 10px;
-            padding: 5px;
+            padding: 15px;
             ;
             width: auto;
             height: 250px;
         }
     
 }
-/*-----------------Page D'accueil------------------*/
-#accueil-wrapper-left,
-#accueil-wrapper-right,
-#accueil-contact-wrapper {
-    grid-column: span 2;
-
-    text-align: center;
-    font-size: 25px;
-    padding: 35px;
-    border: 10px solid white;
-    border-radius: 100%;
-    background-color: rgb(211, 142, 14);
-
-
-
-    height: auto;
-
-    color: white;
-    font-weight: bold;
+.twin-end{
+display:none;
 }
-
-#accueil-wrapper-left,
-#accueil-wrapper-right {
-
-    grid-row-start: 1;
-    grid-row-end: 6;
-}
-
-#accueil-contact-wrapper {
-    grid-column-end: 4;
+.twin-h1{
+   
     grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+}
+.table-twin{
+    
+    margin:0 10%;
+    width:80%;
+    
+    
+    
+    
+}
 
-    grid-row-start: 6;
-    grid-row-end: 11;
-    width: 80%;
+
+.card{
+    border: 5px solid white;
+    border-radius: 20px;
+    font-size: 50px;
+    width:60px;
+    height: 90px;
+
+}
+ .win{
+    
+    background-color: purple;
+    color:white;
+    
+    display:none;
+}
+.num{
+    grid-column: span 1;
+    grid-row: span 1;
+    
+   
+    background-color: rgb(211, 142, 14);
+    
+    color:white;
+}
+.checked{
+    border: 5px solid white;
+    
+    background-color: purple;
+    
+    color:white;
 }

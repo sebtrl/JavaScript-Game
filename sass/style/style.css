@@ -1,73 +1,70 @@
 .btn-tab {
-  font-size: 20px;
-  width: 80px;
-  border-radius: 30px 20px;
-  border: 3px solid purple;
   background-color: #efefef;
   color: #efefef;
 }
 .btn-tab:hover {
-  font-size: 20px;
-  width: 80px;
-  border-radius: 30px 20px;
-  border: 3px solid white;
   background-color: purple;
   color: purple;
 }
 @media (max-width: 500px) {
-  .btn-tab {
-    font-size: 18px;
-    width: 60px;
-  }
   .btn-tab:hover {
-    font-size: 20px;
-    width: 60px;
-    border-radius: 30px 20px;
-    border: 3px solid white;
     background-color: purple;
     color: purple;
   }
 }
 
 .btn-visible {
-  font-size: 20px;
-  width: 80px;
-  border-radius: 30px 20px;
-  border: 3px solid purple;
   background-color: #efefef;
   color: purple;
 }
 .btn-visible:hover {
-  font-size: 20px;
-  width: 80px;
-  border-radius: 30px 20px;
   border: 3px solid white;
   background-color: purple;
   color: #efefef;
 }
+@media (max-width: 500px) {
+  .btn-visible:hover {
+    background-color: purple;
+    color: #efefef;
+  }
+}
 
 .btn {
+  font-weight: bold;
   text-align: center;
   font-size: 20px;
   width: 80px;
   border-radius: 30px 20px;
   border: 3px solid purple;
-  background-color: #efefef;
-  color: purple;
 }
 .btn:hover {
   border: 3px solid white;
-  background-color: purple;
-  color: white;
 }
 @media (max-width: 500px) {
   .btn {
     font-size: 18px;
     width: 60px;
   }
+  .btn:hover {
+    font-size: 20px;
+    width: 60px;
+    border-radius: 30px 20px;
+    border: 3px solid white;
+  }
+}
+
+.small-btn {
+  background-color: #efefef;
+  color: purple;
+}
+.small-btn:hover {
+  border: 3px solid white;
+  background-color: purple;
+  color: white;
 }
 
 .big-btn {
+  font-weight: bold;
   text-align: center;
   margin-top: 25px;
   font-size: 20px;
@@ -84,72 +81,55 @@
   color: white;
 }
 
-#btn-step1 {
+#btn-step1, #btn-step2, #btn-step3 {
+  font-weight: bold;
   display: none;
   margin-left: 15%;
 }
 @media (max-width: 500px) {
-  #btn-step1 {
+  #btn-step1, #btn-step2, #btn-step3 {
     position: absolute;
-    top: 500px;
-  }
-}
-
-#btn-step2 {
-  display: none;
-  margin-left: 15%;
-}
-@media (max-width: 500px) {
-  #btn-step2 {
-    position: absolute;
-    top: 500px;
-  }
-}
-
-#btn-step3 {
-  display: none;
-  margin-left: 15%;
-}
-@media (max-width: 500px) {
-  #btn-step3 {
-    position: absolute;
-    top: 500px;
+    top: 450px;
   }
 }
 
 /*----------------Memory Game -----------------*/
 .btn-tab-step2, .btn-tab-step4, .btn-tab-M {
-  font-size: 20px;
-  width: 80px;
-  border-radius: 30px 20px;
-  border: 3px solid purple;
   background-color: #efefef;
   color: purple;
 }
 .btn-tab-step2:hover, .btn-tab-step4:hover, .btn-tab-M:hover {
-  font-size: 20px;
-  width: 80px;
-  border-radius: 30px 20px;
-  border: 3px solid white;
   background-color: purple;
   color: #efefef;
 }
+@media (max-width: 500px) {
+  .btn-tab-step2:hover, .btn-tab-step4:hover, .btn-tab-M:hover {
+    background-color: purple;
+    color: #efefef;
+  }
+}
 
 .btn-visible-step3, .btn-visible-step5 {
-  font-size: 20px;
-  width: 80px;
-  border-radius: 30px 20px;
-  border: 3px solid purple;
   background-color: #efefef;
   color: purple;
 }
 .btn-visible-step3:hover, .btn-visible-step5:hover {
-  font-size: 20px;
-  width: 80px;
-  border-radius: 30px 20px;
-  border: 3px solid white;
   background-color: purple;
   color: #efefef;
+}
+@media (max-width: 500px) {
+  .btn-visible-step3, .btn-visible-step5 {
+    font-size: 18px;
+    width: 60px;
+  }
+  .btn-visible-step3:hover, .btn-visible-step5:hover {
+    font-size: 20px;
+    width: 60px;
+    border-radius: 30px 20px;
+    border: 3px solid white;
+    background-color: purple;
+    color: #efefef;
+  }
 }
 
 .btn-tab-step6 {
@@ -159,6 +139,7 @@
   font-size: 20px;
   border-radius: 30px 20px;
   border: 3px solid purple;
+  font-weight: bold;
 }
 .btn-tab-step6:hover {
   background-color: purple;
@@ -167,46 +148,100 @@
   border-radius: 30px 20px;
   border: 3px solid white;
 }
+@media (max-width: 500px) {
+  .btn-tab-step6 {
+    font-size: 18px;
+    width: 60px;
+  }
+  .btn-tab-step6:hover {
+    font-size: 20px;
+    width: 60px;
+    border-radius: 30px 20px;
+    border: 3px solid white;
+    background-color: purple;
+    color: #efefef;
+  }
+}
 
 #btn-end-step2, #btn-end-step3 {
   margin-left: 5%;
   display: none;
+  font-weight: bold;
+}
+@media (max-width: 500px) {
+  #btn-end-step2, #btn-end-step3 {
+    position: absolute;
+    top: 450px;
+    left: 28%;
+    right: 28%;
+    margin: 5%;
+  }
 }
 
 #btn-end-step4, #btn-end-step5, #btn-end-step6 {
   margin-left: 2%;
   display: none;
+  font-weight: bold;
+}
+@media (max-width: 500px) {
+  #btn-end-step4, #btn-end-step5, #btn-end-step6 {
+    position: absolute;
+    top: 450px;
+    left: 28%;
+    right: 28%;
+    margin: 5%;
+  }
 }
 
 #btn-start-step2, #btn-start-step3 {
   margin-left: 5%;
+  font-weight: bold;
+}
+@media (max-width: 500px) {
+  #btn-start-step2, #btn-start-step3 {
+    position: absolute;
+    top: 450px;
+    left: 28%;
+    right: 28%;
+    margin: 5%;
+  }
 }
 
 #btn-start-step4, #btn-start-step5, #btn-start-step6 {
   margin-left: 2%;
-}
-
-/*-----------------Memory et Lucky------------------*/
-#wrapper {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  text-align: center;
-  font-size: 25px;
-  padding: 15px 15px;
-  border: 10px solid white;
-  border-radius: 100px;
-  background-color: #d38e0e;
-  grid-column-start: 2;
-  grid-column-end: 4;
-  margin: 5%;
-  width: 90%;
-  height: auto;
-  grid-row: span 6;
-  color: white;
   font-weight: bold;
 }
+@media (max-width: 500px) {
+  #btn-start-step4, #btn-start-step5, #btn-start-step6 {
+    position: absolute;
+    top: 450px;
+    left: 28%;
+    right: 28%;
+    margin: 5%;
+  }
+}
+
+/*----------------------------------Global------------------------------------*/
+.wrapper {
+  border: 10px solid white;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  background-color: #d38e0e;
+  font-size: 25px;
+  height: auto;
+  margin: 5% 10%;
+}
+.main-body {
+  padding: 15px 15px;
+  width: 80%;
+  border-radius: 100px;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row: span 6;
+}
 @media (min-width: 1300px) {
-  #wrapper {
+  .main-body {
     grid-column-start: 4;
     grid-column-end: 7;
     grid-row-start: 4;
@@ -215,31 +250,31 @@
   }
 }
 @media (max-width: 500px) {
-  #wrapper {
+  .main-body {
+    font-size: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: 10px;
-    padding: 5px;
+    padding: 15px;
     width: auto;
     height: 250px;
   }
+}
+
+/*-----------------Memory et Lucky------------------*/
+.game {
+  display: grid;
+  grid-template-columns: 50% 50%;
 }
 
 /*-----------------Page D'accueil------------------*/
 #accueil-wrapper-left,
 #accueil-wrapper-right,
 #accueil-contact-wrapper {
-  grid-column: span 2;
-  text-align: center;
-  font-size: 25px;
+  grid-column: span 5;
   padding: 35px;
   border: 10px solid white;
-  border-radius: 100%;
-  background-color: #d38e0e;
-  height: auto;
-  color: white;
-  font-weight: bold;
 }
 
 #accueil-wrapper-left,
@@ -248,18 +283,168 @@
   grid-row-end: 6;
 }
 
+#accueil-wrapper-left {
+  grid-column-end: 6;
+  grid-column-start: 3;
+  border-radius: 10% 50% 0% 90%;
+}
+@media (min-width: 1300px) {
+  #accueil-wrapper-left {
+    grid-column: span 2;
+    grid-column-start: 4;
+    grid-column-end: 6;
+    grid-row-start: 2;
+    padding: 45px 75px;
+  }
+}
+@media (max-width: 500px) {
+  #accueil-wrapper-left {
+    border-radius: 80%;
+    font-size: 20px;
+    grid-column-start: 3;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 4;
+  }
+}
+
+#accueil-wrapper-right {
+  grid-column-end: 9;
+  grid-column-start: 6;
+  border-radius: 50% 10% 90% 0%;
+}
+@media (min-width: 1300px) {
+  #accueil-wrapper-right {
+    grid-column: span 2;
+    grid-column-start: 6;
+    grid-column-end: 8;
+    grid-row-start: 2;
+    padding: 45px 75px;
+  }
+}
+@media (max-width: 500px) {
+  #accueil-wrapper-right {
+    border-radius: 80%;
+    font-size: 20px;
+    grid-column-start: 3;
+    grid-column-end: 9;
+    grid-row-start: 4;
+    grid-row-end: 7;
+  }
+}
+
 #accueil-contact-wrapper {
-  grid-column-end: 4;
-  grid-column-start: 2;
+  grid-column-end: 7;
+  grid-column-start: 5;
+  border-radius: 10% 10% 70% 70%;
   grid-row-start: 6;
   grid-row-end: 11;
+  width: 100%;
+}
+@media (min-width: 1300px) {
+  #accueil-contact-wrapper {
+    grid-column-start: 5;
+    grid-column-end: 7;
+    grid-row-start: 6;
+    grid-row-end: 9;
+    padding: 45px 75px;
+  }
+}
+@media (max-width: 500px) {
+  #accueil-contact-wrapper {
+    border-radius: 80%;
+    font-size: 20px;
+    grid-column-start: 3;
+    grid-column-end: 9;
+    grid-row-start: 7;
+    grid-row-end: 10;
+    width: 80%;
+  }
+}
+
+/*---------------------------twin-----------------*/
+.twin-game {
+  padding: 10px;
+  justify-items: center;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row: span 8;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+}
+.twin-game #start {
+  margin: 20px 0;
+}
+@media (min-width: 1300px) {
+  .twin-game {
+    grid-column-start: 4;
+    grid-column-end: 7;
+    grid-row-start: 4;
+    grid-row: span 5;
+    padding: 45px 75px;
+  }
+}
+@media (max-width: 500px) {
+  .twin-game {
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px;
+    padding: 15px;
+    width: auto;
+    height: 250px;
+  }
+}
+
+.twin-end {
+  display: none;
+}
+
+.twin-h1 {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 1;
+}
+
+.table-twin {
+  margin: 0 10%;
   width: 80%;
+}
+
+.card {
+  border: 5px solid white;
+  border-radius: 20px;
+  font-size: 50px;
+  width: 60px;
+  height: 90px;
+}
+
+.win {
+  background-color: purple;
+  color: white;
+  display: none;
+}
+
+.num {
+  grid-column: span 1;
+  grid-row: span 1;
+  background-color: #d38e0e;
+  color: white;
+}
+
+.checked {
+  border: 5px solid white;
+  background-color: purple;
+  color: white;
 }
 
 #accueil-container {
   text-align: center;
   display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
   grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
   justify-items: center;
   width: 100%;
@@ -270,7 +455,7 @@
 #container {
   text-align: center;
   display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-columns: 20% 30% 30% 20%;
   grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
   width: 100%;
   height: 100vh;
@@ -286,8 +471,16 @@
 @media (max-width: 500px) {
   #container {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
+    justify-content: space-around;
   }
+}
+
+#container-twin {
+  display: grid;
+  grid-template-columns: 25% 1fr 15%;
+  grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+  background-color: #5e035e;
 }
 
 #counter {
@@ -309,26 +502,66 @@
 }
 @media (max-width: 500px) {
   #counter {
-    margin: 25px;
-    margin-left: 5px;
+    margin: 15% 10% 30% 10%;
     font-size: 22px;
     width: 80%;
   }
 }
 
+/*#counter-twin{
+    grid-column-start: 1;
+    grid-row-start: 2 ;
+    color: white;
+
+
+    width: 100%;
+    font-size: 25px;
+    @media (min-width:1300px) {
+
+
+
+            grid-column-end: 6;
+            grid-row-start:1;
+
+            font-size: 30px;
+
+
+
+
+        }
+    @media (max-width:500px) {
+
+
+
+            margin: 15% 10% 30% 10%;
+
+            font-size: 22px;
+
+            width: 80%;
+
+
+        }
+
+}*/
 nav {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: right;
   grid-column-start: 4;
   margin-top: 10px;
   grid-row-start: 1;
   width: 100%;
   font-size: 25px;
 }
+nav .nav-wrapper {
+  display: flex;
+  flex-direction: column;
+}
 nav .big-btn {
   width: 135px;
   border: 3px solid purple;
   margin-top: 10px;
+  font-weight: bold;
   color: purple;
 }
 nav .big-btn:hover {
@@ -336,16 +569,38 @@ nav .big-btn:hover {
   background-color: #d38e0e;
   color: white;
 }
+@media (min-width: 1300px) {
+  nav {
+    grid-column-start: 9;
+    grid-column-end: 10;
+    grid-row: span 2;
+    grid-row-start: 3;
+  }
+}
+@media (max-width: 500px) {
+  nav {
+    margin: 5px 5%;
+    flex-direction: row;
+    justify-content: center;
+    width: 90%;
+  }
+  nav .big-btn {
+    font-size: 13px;
+    width: 90px;
+    border: 3px solid purple;
+    margin-top: 10px;
+    color: purple;
+  }
+  nav .big-btn:hover {
+    border: 3px solid white;
+    background-color: #d38e0e;
+    color: white;
+  }
+}
 
 /*-----------------Lucky Game------------------*/
 #rules {
   grid-column: span 2;
-}
-
-#step1 {
-  grid-column: span 2;
-  text-align: center;
-  display: none;
 }
 
 .rules-step1 {
@@ -360,24 +615,12 @@ nav .big-btn:hover {
 @media (max-width: 500px) {
   .tab-step1 {
     font-size: 20px;
-    width: 80px;
-    margin: 0 22%;
+    width: 70%;
+    margin: 0 15%;
   }
 }
 
-#step2 {
-  grid-column: span 2;
-  text-align: center;
-  display: none;
-}
-
-#step3 {
-  grid-column: span 2;
-  text-align: center;
-  display: none;
-}
-
-#step3 {
+#step1, #step2, #step3, #end, #step4, #step5, #step6 {
   grid-column: span 2;
   text-align: center;
   display: none;
@@ -385,9 +628,6 @@ nav .big-btn:hover {
 
 #end {
   margin: 10%;
-  grid-column: span 2;
-  text-align: center;
-  display: none;
 }
 
 /*-----------------Memory Game------------------*/
@@ -395,44 +635,12 @@ nav .big-btn:hover {
   margin-top: 10px;
 }
 
-#rules2-step2 {
+#rules2-step2, #rules2-step3, #rules2-step4, #rules2-step5 {
   margin-top: 10px;
   display: none;
 }
 
-#rules2-step3 {
-  margin-top: 10px;
-  display: none;
-}
-
-#rules2-step4 {
-  margin-top: 10px;
-  display: none;
-}
-
-#rules2-step5 {
-  margin-top: 10px;
-  display: none;
-}
-
-#step4 {
-  grid-column: span 2;
-  text-align: center;
-  display: none;
-}
-
-#step5 {
-  grid-column: span 2;
-  text-align: center;
-  display: none;
-}
-
-#step6 {
-  grid-column: span 2;
-  text-align: center;
-  display: none;
-}
-#step6 #tab-step6 {
+#tab-step6 {
   display: flex;
   flex-direction: column;
 }
@@ -442,11 +650,51 @@ nav .big-btn:hover {
   width: 40%;
   margin: 0 30%;
 }
+@media (max-width: 500px) {
+  .tab {
+    font-size: 20px;
+    width: 70%;
+    margin: 0 15%;
+  }
+}
 
 .big-tab {
   margin-top: 10px;
   width: 60%;
   margin: 0 20%;
+}
+@media (max-width: 500px) {
+  .big-tab {
+    font-size: 20px;
+    width: 74%;
+    margin: 0 13%;
+  }
+}
+
+.big-tab-step5 {
+  margin-top: 10px;
+  width: 60%;
+  margin: 0 20%;
+}
+@media (max-width: 500px) {
+  .big-tab-step5 {
+    font-size: 20px;
+    width: 74%;
+    margin: 0 13%;
+  }
+}
+
+.new-big-tab-step5 {
+  margin-top: 10px;
+  width: 60%;
+  margin: 0 20%;
+}
+@media (max-width: 500px) {
+  .new-big-tab-step5 {
+    font-size: 20px;
+    width: 80%;
+    margin: 0 11% 0 4%;
+  }
 }
 
 html,
@@ -454,6 +702,10 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+a {
+  width: 160px;
 }
 
 h1 {
@@ -476,8 +728,9 @@ h1:hover {
 }
 @media (max-width: 500px) {
   h1 {
+    order: 5;
     font-size: 40px;
-    margin: 50px 25px;
+    margin: 20px 25px;
   }
 }
 
